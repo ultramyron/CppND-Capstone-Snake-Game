@@ -16,17 +16,22 @@ class Game {
   int GetSize() const;
 
  private:
+  static int randomNumber;
   Snake snake;
-  SDL_Point food;
+  Food food;
+  SDL_Point RegularFood;
+  SDL_Point SpeedFood;
+  SDL_Point ShrinkFood;
 
+// random number generator
   std::random_device dev;
   std::mt19937 engine;
   std::uniform_int_distribution<int> random_w;
   std::uniform_int_distribution<int> random_h;
 
   int score{0};
-
-  void PlaceFood();
+  static int RNG();
+  int PlaceFood();
   void Update();
 };
 
