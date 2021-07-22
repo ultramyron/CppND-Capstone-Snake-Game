@@ -13,17 +13,8 @@ Food()
   shrinking(false),
   speeding(false){};
 
-void SetGrowing(){
+void SetGrowing(bool& growing){
   growing = !growing;
-}
-bool GetGrowing(){
-  return growing;
-}
-bool GetShrinking() {
-  return shrinking;
-}
-bool GetSpeeding() {
-  return speeding;
 }
 bool GrowBody(){
   growing = true;

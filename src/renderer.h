@@ -4,6 +4,7 @@
 #include <vector>
 #include "SDL.h"
 #include "snake.h"
+#include <string>
 
 class Renderer {
  public:
@@ -12,12 +13,13 @@ class Renderer {
   ~Renderer();
 
   void Render(Snake const snake, SDL_Point const &food, int flag);
-  void UpdateWindowTitle(int score, int fps);
+  void UpdateWindowTitle(int score, int fps, int flag);
 
  private:
   SDL_Window *sdl_window;
   SDL_Renderer *sdl_renderer;
 
+  std::string foodType;
   const std::size_t screen_width;
   const std::size_t screen_height;
   const std::size_t grid_width;

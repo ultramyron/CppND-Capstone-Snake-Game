@@ -46,7 +46,7 @@ void Snake::UpdateHead() {
 
 void Snake::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_cell, int flag, bool &growing, bool &shrinking, bool &speeding) {
   // Add previous head location to vector
-  
+  SDL_Point extraCell = prev_head_cell;
   body.push_back(prev_head_cell);
   // if statements with conditions like "growing" or "faster", etc.
 
@@ -57,8 +57,8 @@ void Snake::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_cell, 
       }
       else {
         std::cout << "I Grew" << std::endl;
-        
-        growing = false;
+        body.push_back(extraCell);
+        SetGrowing(growing);
         
         size++;
       }

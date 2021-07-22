@@ -48,12 +48,26 @@ void Renderer::Render(Snake const snake, SDL_Point const &food, int flag) {
   SDL_RenderClear(sdl_renderer);
 
   // Render food
+  if (flag == 1){
+    SDL_SetRenderDrawColor(sdl_renderer, 255, 255, 255, 255); // white
+    block.x = food.x * block.w;
+    block.y = food.y * block.h;
+    SDL_RenderFillRect(sdl_renderer, &block);
+}
+  else if (flag == 2) {
+    SDL_SetRenderDrawColor(sdl_renderer, 255, 0, 0, 255); // red
+    block.x = food.x * block.w;
+    block.y = food.y * block.h;
+    SDL_RenderFillRect(sdl_renderer, &block);
 
-  SDL_SetRenderDrawColor(sdl_renderer, 255, 255, 255, 255); // white
-  block.x = food.x * block.w;
-  block.y = food.y * block.h;
-  SDL_RenderFillRect(sdl_renderer, &block);
+  }
+  else if (flag == 3) {
+    SDL_SetRenderDrawColor(sdl_renderer, 0, 255, 0, 255); // green
+    block.x = food.x * block.w;
+    block.y = food.y * block.h;
+    SDL_RenderFillRect(sdl_renderer, &block);
 
+  }
 
   // Render snake's body
   SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xFF, 0xFF, 0xFF);
@@ -77,7 +91,14 @@ void Renderer::Render(Snake const snake, SDL_Point const &food, int flag) {
   SDL_RenderPresent(sdl_renderer);
 }
 
-void Renderer::UpdateWindowTitle(int score, int fps) {
-  std::string title{"Snake Score: " + std::to_string(score) + " FPS: " + std::to_string(fps)};
+void Renderer::UpdateWindowTitle(int score, int fps, int flag) {
+  if (flag == 1){
+  foodType = "Grow Food";}
+  else if (flag == 2){
+  foodType = "Shrink Food";}
+  else if (flag == 3){
+  foodType = "Speed Food";}
+
+  std::string title{"Snake Score: " + std::to_string(score) + " FPS: " + std::to_string(fps) + " Previous Food Type: " + foodType};
   SDL_SetWindowTitle(sdl_window, title.c_str());
 }
