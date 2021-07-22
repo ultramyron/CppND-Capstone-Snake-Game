@@ -235,9 +235,6 @@ CMakeFiles/SnakeGame.dir/src/renderer.cpp.o: \
   /opt/homebrew/Cellar/sdl2/2.0.14_1/include/SDL2/SDL_locale.h \
   /opt/homebrew/Cellar/sdl2/2.0.14_1/include/SDL2/SDL_misc.h \
   /Users/myronphan/CppND-Capstone-Snake-Game/src/snake.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iostream \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/ios \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__locale \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/string \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/string_view \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__string \
@@ -248,6 +245,9 @@ CMakeFiles/SnakeGame.dir/src/renderer.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/_types/_wctrans_t.h \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iostream \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/ios \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__locale \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/mutex \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__mutex_base \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/chrono \
