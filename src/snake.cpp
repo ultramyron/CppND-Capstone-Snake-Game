@@ -1,11 +1,9 @@
 #include "snake.h"
 #include <cmath>
 #include <iostream>
+#include <cassert>
 
-bool Snake::growing = false;
-bool Snake::shrinking = false;
-bool Snake::speeding = false;
-void Snake::Update(int flag) {
+void Snake::Update(int flag,  bool &growing,  bool &shrinking,  bool &speeding) {
   SDL_Point prev_cell{
       static_cast<int>(head_x),
       static_cast<int>(
@@ -18,7 +16,7 @@ void Snake::Update(int flag) {
   // Update all of the body vector items if the snake head has moved to a new
   // cell.
   if (current_cell.x != prev_cell.x || current_cell.y != prev_cell.y) {
-    UpdateBody(current_cell, prev_cell, flag);
+    UpdateBody(current_cell, prev_cell, flag, growing, shrinking, speeding);
   }
 }
 
@@ -46,15 +44,11 @@ void Snake::UpdateHead() {
   head_y = fmod(head_y + grid_height, grid_height);
 }
 
-void Snake::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_cell, int flag) {
+void Snake::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_cell, int flag, bool &growing, bool &shrinking, bool &speeding) {
   // Add previous head location to vector
+  
   body.push_back(prev_head_cell);
   // if statements with conditions like "growing" or "faster", etc.
-  // 
-  //std::cout << "growing status: " << growing << std::endl;
-  //std::cout << "shrinking status: " << shrinking << std::endl;
-  //std::cout << "speeding status: " << speeding << std::endl;
-  //std::cout << "flag status: " << flag << std::endl;
 
   switch (flag) {
     case 1:
@@ -62,57 +56,44 @@ void Snake::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_cell, 
         body.erase(body.begin());
       }
       else {
-        std::cout << "helo"<< std::endl;
+        std::cout << "I Grew" << std::endl;
+        
         growing = false;
+        
         size++;
       }
       break;
     case 2:
-      if (!growing) {
+      if (!shrinking) {
         body.erase(body.begin());
       }
       else {
-        std::cout << "helo"<< std::endl;
-        growing = false;
-        size++;
+        shrinking = false;
+        if (size > 1){
+        std::cout << "I Shrank" << std::endl;
+        size--;
+        body.erase(body.begin());
+        body.erase(body.begin());
+        }
+        else{
+          std::cout << "already too small" << std::endl;
+          shrinking = false;
+          body.erase(body.begin());
+        }
       }
       break;
     case 3:
-      if (!growing) {
+      if (!speeding) {
         body.erase(body.begin());
       }
       else {
-        std::cout << "helo"<< std::endl;
-        growing = false;
-        size++;
+        std::cout << "Growing Status: " << growing << std::endl;
+        std::cout << "I Speed" << std::endl;
+        speeding = false;
+        speed = speed + .02;
       }
       break;
   }
-  /*
-  if (!growing && flag == 1) {
-    // Remove the tail from the vector.
-    body.erase(body.begin());
-  } else{
-    std::cout << "helo"<< std::endl;
-    growing = false;
-    size++;
-  }
-  
-  else if (!speeding && flag == 2) {
-    body.erase(body.begin());
-  } else {
-    std::cout << "helo"<< std::endl;
-    speeding = false;
-    size++;
-  }
-  else if (!shrinking && flag == 3) {
-    body.erase(body.begin());
-  } else {
-    std::cout << "helo"<< std::endl;
-    shrinking = false;
-    size++;
-  }
-  */
   // Check if the snake has died.
   for (auto const &item : body) {
     if (current_head_cell.x == item.x && current_head_cell.y == item.y) {
@@ -120,8 +101,6 @@ void Snake::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_cell, 
     }
   }
 }
-
-void Snake::GrowBody() { growing = true; }
 
 // Inefficient method to check if cell is occupied by snake.
 bool Snake::SnakeCell(int x, int y) {
@@ -134,18 +113,4 @@ bool Snake::SnakeCell(int x, int y) {
     }
   }
   return false;
-}
-
-bool Food::GrowBody(){
-    Snake::growing = true;
-    return Snake::growing;
-}
-bool Food::ShrinkDown() {
-    Snake::growing = true;
-    return Snake::growing;
-}
-
-bool Food::SpeedUp() {
-    Snake::growing = true;
-    return Snake::growing;
 }

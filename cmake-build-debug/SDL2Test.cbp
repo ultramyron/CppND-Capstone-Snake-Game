@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="SDL2Test"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\opt\;CMake Files\..\..\..\opt\homebrew\;CMake Files\..\..\..\opt\homebrew\lib\;CMake Files\..\..\..\opt\homebrew\lib\cmake\;CMake Files\..\..\..\opt\homebrew\lib\cmake\SDL2\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -j8 -f &quot;/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -j8 -f &quot;/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -j8 -f &quot;/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -j8 -f &quot;/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -j8 -f &quot;/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -j8 -f &quot;/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -j8 -f &quot;/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -j8 -f &quot;/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -j8 -f &quot;/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -j8 -f &quot;/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -j8 -f &quot;/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -j8 -f &quot;/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SnakeGame">
+				<Option output="/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug/SnakeGame" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/opt/homebrew/Cellar/sdl2/2.0.14_1/include/SDL2"/>
+					<Add directory="/Users/myronphan/CppND-Capstone-Snake-Game/src"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -j8 -f &quot;/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 SnakeGame"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -j8 -f &quot;/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -j8 -f &quot;/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -j8 -f &quot;/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SnakeGame/fast">
+				<Option output="/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug/SnakeGame" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/opt/homebrew/Cellar/sdl2/2.0.14_1/include/SDL2"/>
+					<Add directory="/Users/myronphan/CppND-Capstone-Snake-Game/src"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/opt/homebrew/bin/gmake -j8 -f &quot;/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 SnakeGame/fast"/>
+					<CompileFile command="/opt/homebrew/bin/gmake -j8 -f &quot;/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/opt/homebrew/bin/gmake -j8 -f &quot;/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/opt/homebrew/bin/gmake -j8 -f &quot;/Users/myronphan/CppND-Capstone-Snake-Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/myronphan/CppND-Capstone-Snake-Game/src/controller.cpp">
+			<Option target="SnakeGame"/>
+		</Unit>
+		<Unit filename="/Users/myronphan/CppND-Capstone-Snake-Game/src/controller.h">
+			<Option target="SnakeGame"/>
+		</Unit>
+		<Unit filename="/Users/myronphan/CppND-Capstone-Snake-Game/src/game.cpp">
+			<Option target="SnakeGame"/>
+		</Unit>
+		<Unit filename="/Users/myronphan/CppND-Capstone-Snake-Game/src/game.h">
+			<Option target="SnakeGame"/>
+		</Unit>
+		<Unit filename="/Users/myronphan/CppND-Capstone-Snake-Game/src/main.cpp">
+			<Option target="SnakeGame"/>
+		</Unit>
+		<Unit filename="/Users/myronphan/CppND-Capstone-Snake-Game/src/renderer.cpp">
+			<Option target="SnakeGame"/>
+		</Unit>
+		<Unit filename="/Users/myronphan/CppND-Capstone-Snake-Game/src/renderer.h">
+			<Option target="SnakeGame"/>
+		</Unit>
+		<Unit filename="/Users/myronphan/CppND-Capstone-Snake-Game/src/snake.cpp">
+			<Option target="SnakeGame"/>
+		</Unit>
+		<Unit filename="/Users/myronphan/CppND-Capstone-Snake-Game/src/snake.h">
+			<Option target="SnakeGame"/>
+		</Unit>
+		<Unit filename="/Users/myronphan/CppND-Capstone-Snake-Game/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/myronphan/CppND-Capstone-Snake-Game/../../../opt/homebrew/lib/cmake/SDL2/sdl2-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\opt\homebrew\lib\cmake\SDL2\"/>
+		</Unit>
+		<Unit filename="/Users/myronphan/CppND-Capstone-Snake-Game/../../../opt/homebrew/lib/cmake/SDL2/sdl2-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\opt\homebrew\lib\cmake\SDL2\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

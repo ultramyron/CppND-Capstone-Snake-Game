@@ -228,8 +228,6 @@ CMakeFiles/SnakeGame.dir/src/main.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference \
   /Users/myronphan/CppND-Capstone-Snake-Game/src/controller.h \
   /Users/myronphan/CppND-Capstone-Snake-Game/src/snake.h \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/vector \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__split_buffer \
   /opt/homebrew/Cellar/sdl2/2.0.14_1/include/SDL2/SDL.h \
   /opt/homebrew/Cellar/sdl2/2.0.14_1/include/SDL2/SDL_main.h \
   /opt/homebrew/Cellar/sdl2/2.0.14_1/include/SDL2/SDL_stdinc.h \
@@ -288,6 +286,8 @@ CMakeFiles/SnakeGame.dir/src/main.cpp.o: \
   /opt/homebrew/Cellar/sdl2/2.0.14_1/include/SDL2/SDL_version.h \
   /opt/homebrew/Cellar/sdl2/2.0.14_1/include/SDL2/SDL_locale.h \
   /opt/homebrew/Cellar/sdl2/2.0.14_1/include/SDL2/SDL_misc.h \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/vector \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__split_buffer \
   /Users/myronphan/CppND-Capstone-Snake-Game/src/game.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/random \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cmath \

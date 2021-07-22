@@ -1,10 +1,49 @@
 #ifndef SNAKE_H
 #define SNAKE_H
 
-#include <vector>
 #include "SDL.h"
+#include <vector>
 
-class Snake {
+
+class Food {
+public:
+
+Food()
+  : growing(false),
+  shrinking(false),
+  speeding(false){};
+
+void SetGrowing(){
+  growing = !growing;
+}
+bool GetGrowing(){
+  return growing;
+}
+bool GetShrinking() {
+  return shrinking;
+}
+bool GetSpeeding() {
+  return speeding;
+}
+bool GrowBody(){
+  growing = true;
+  return growing;
+}
+bool ShrinkDown() {
+  shrinking = true;
+  return shrinking;
+}
+bool SpeedUp() {
+  speeding = true;
+  return speeding;
+}
+  bool growing;
+  bool shrinking;
+  bool speeding;
+
+
+};
+class Snake : public Food{
  public:
   enum class Direction { kUp, kDown, kLeft, kRight };
 
@@ -14,7 +53,7 @@ class Snake {
         head_x(grid_width / 2),
         head_y(grid_height / 2){}
 
-  void Update(int flag);
+  void Update(int flag, bool &growing, bool &shrinking, bool &speeding);
 
   void GrowBody();
   bool SnakeCell(int x, int y);
@@ -27,15 +66,10 @@ class Snake {
   float head_x;
   float head_y;
   std::vector<SDL_Point> body;
-  static bool growing;
-  static bool shrinking;
-  static bool speeding;
-
-
 
  private:
   void UpdateHead();
-  void UpdateBody(SDL_Point &current_cell, SDL_Point &prev_cell, int flag);
+  void UpdateBody(SDL_Point &current_cell, SDL_Point &prev_cell, int flag, bool &growing, bool &shrinking, bool &speeding);
 
 
   int grid_width;
@@ -44,12 +78,4 @@ class Snake {
   friend class Food;
 
 };
-class Food {
-public:
-
-    static bool GrowBody();
-    bool SpeedUp();
-    bool ShrinkDown();
-};
-
 #endif

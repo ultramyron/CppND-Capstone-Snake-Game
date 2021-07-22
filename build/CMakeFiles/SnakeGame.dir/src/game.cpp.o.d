@@ -231,6 +231,8 @@ CMakeFiles/SnakeGame.dir/src/game.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/_types/_nl_item.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bsd_locale_defaults.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/bitset \
+  /Users/myronphan/CppND-Capstone-Snake-Game/src/controller.h \
+  /Users/myronphan/CppND-Capstone-Snake-Game/src/snake.h \
   /opt/homebrew/Cellar/sdl2/2.0.14_1/include/SDL2/SDL.h \
   /opt/homebrew/Cellar/sdl2/2.0.14_1/include/SDL2/SDL_main.h \
   /opt/homebrew/Cellar/sdl2/2.0.14_1/include/SDL2/SDL_stdinc.h \
@@ -289,7 +291,5 @@ CMakeFiles/SnakeGame.dir/src/game.cpp.o: \
   /opt/homebrew/Cellar/sdl2/2.0.14_1/include/SDL2/SDL_version.h \
   /opt/homebrew/Cellar/sdl2/2.0.14_1/include/SDL2/SDL_locale.h \
   /opt/homebrew/Cellar/sdl2/2.0.14_1/include/SDL2/SDL_misc.h \
-  /Users/myronphan/CppND-Capstone-Snake-Game/src/controller.h \
-  /Users/myronphan/CppND-Capstone-Snake-Game/src/snake.h \
   /Users/myronphan/CppND-Capstone-Snake-Game/src/renderer.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iostream
